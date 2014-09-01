@@ -1,0 +1,23 @@
+{
+	"ImportPath": "github.com/BTBurke/remailer",
+	"GoVersion": "go1.3",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gin-gonic/gin",
+			"Comment": "v0.4-8-g3b079bb",
+			"Rev": "3b079bb6f79ae501e73a5401c41b589f6616b61e"
+		},
+		{
+			"ImportPath": "github.com/julienschmidt/httprouter",
+			"Rev": "6db904312c78e5595a8d48c6b74fce77f407a33a"
+		},
+		{
+			"ImportPath": "github.com/mailgun/mailgun-go",
+			"Rev": "3b7eda8f3bfd97aebc7f7342d12205930a218a98"
+		},
+		{
+			"ImportPath": "github.com/mbanzon/simplehttp",
+			"Rev": "8a366f8bda6f645409c0168d60b3844e3110ad09"
+		}
+	]
+}
