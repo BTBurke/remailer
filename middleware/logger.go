@@ -1,4 +1,4 @@
-package remailer
+package middleware
 
 import (
 	"log"
