@@ -15,7 +15,7 @@ MAILGUN_DOMAIN        = <your mailgun domain>
 REMAILER_FROM_ADDRESS = <email address you want mail sent from e.g. noreply@yoursite.com>
 REMAILER_TO_ADDRESS   = <email address you want form data forwarded to>
 REMAILER_SUBJ         = <subject line for emails>
-REMAILER_API_PORT     = <api port>
+PORT                  = <api port>
 ```
 
 On your site, you send a POST request to `http://<your_site>/send` with the following JSON payload:
