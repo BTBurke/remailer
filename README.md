@@ -27,4 +27,10 @@ On your site, you send a POST request to `http://<your_site>/send` with the foll
 }
 ```
 
+Server responses:
+```
+200:  Successfully queued for sending by Mailgun
+400:  Either malformed request or error on Mailgun side
+```
+
 By default, it will mail a copy to the originator and your forwarding address.  Note that there is no authentication/authorization included, but since the to address is set server-side, it shouldn't be possible for someone to use your account as a generic remailer.
