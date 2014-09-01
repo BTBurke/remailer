@@ -4,7 +4,7 @@ import "github.com/gin-gonic/gin"
 import "github.com/mailgun/mailgun-go"
 import "os"
 import "fmt"
-import "github.com/BTBurke/remailer/remailer"
+import "github.com/BTBurke/remailer/middleware"
 
 
 type Inquiry struct {
@@ -78,8 +78,8 @@ func main() {
 	mailgunSend := bindmailgunSend()
 
 	r := gin.New()
-	r.Use(remailer.Logger())
-	r.Use(remailer.CORSaccept())
+	r.Use(middleware.Logger())
+	r.Use(middleware.CORSaccept())
 	r.Use(gin.Recovery())
 
 
