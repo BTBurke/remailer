@@ -1,7 +1,7 @@
 Remailer
 ===
 
-Remailer is a simple API for remailing forms from static sites without an SMTP server.  I use it with single-page AngularJS sites that are hosted on Amazon S3.
+Remailer is a simple API server for remailing forms from static sites without an SMTP server.  I use it with single-page AngularJS sites that are hosted on Amazon S3.
 
 It receives form data via post and uses Mailgun to forward it to another address.  You must have your own Mailgun account for this to work, but for most sites this is free.
 
@@ -34,3 +34,5 @@ Server responses:
 ```
 
 By default, it will mail a copy to the originator and your forwarding address.  Note that there is no authentication/authorization included, but since the to address is set server-side, it shouldn't be possible for someone to use your account as a generic remailer.
+
+To build it, you must have Go installed.  It depends on the [Gin](http://github.com/gin-gonic/gin) framework.
