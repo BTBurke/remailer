@@ -70,9 +70,9 @@ func bindmailgunSend() func(c *gin.Context) {
 
 
 func main() {
-	port := os.Getenv("MAILER_API_PORT")
+	port := os.Getenv("PORT")
 	if len(port) == 0 {
-		fmt.Println("ERROR: Port not specified. Set in MAILER_API_PORT.")
+		fmt.Println("ERROR: Port not specified. Set in PORT.")
 		os.Exit(1)
 	}
 	mailgunSend := bindmailgunSend()
