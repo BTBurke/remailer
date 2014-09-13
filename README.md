@@ -15,7 +15,7 @@ MAILGUN_DOMAIN        = <your mailgun domain>
 REMAILER_FROM_ADDRESS = <email address you want mail sent from e.g. noreply@yoursite.com>
 REMAILER_TO_ADDRESS   = <email address you want form data forwarded to>
 REMAILER_SUBJ         = <subject line for emails>
-PORT                  = <api port>
+PORT                  = <api port>  # Omit if using Heroku
 ```
 
 On your site, you send a POST request to `http://<your_site>/send` with the following JSON payload:
@@ -35,4 +35,8 @@ Server responses:
 
 By default, it will mail a copy to the originator and your forwarding address.  Note that there is no authentication/authorization included, but since the to address is set server-side, it shouldn't be possible for someone to use your account as a generic remailer.
 
-To build it, you must have Go installed.  It depends on the [Gin](http://github.com/gin-gonic/gin) framework.
+To build on Heroku:
+```
+heroku create -b https://github.com/kr/heroku-buildpack-go.git
+git push heroku master
+```
